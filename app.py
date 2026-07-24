@@ -110,9 +110,9 @@ if st.session_state.portfolio:
     # 展示總資產
     st.metric(label="💰 目前總資產估計", value=f"${grand_total:,.2f}")
 
-    # 展示股票表格
+    # 展示股票表格 (使用新版語法 width='stretch')
     df = pd.DataFrame(data)
-    st.dataframe(df, use_container_width=True, hide_index=True)
+    st.dataframe(df, width="stretch", hide_index=True)
 
     # 刪除股票區塊
     st.subheader("🗑️ 刪除股票")
